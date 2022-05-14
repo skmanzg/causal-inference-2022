@@ -1,12 +1,11 @@
 # R Hidden Curriculum Assignment
+#### [The result] 
+**code.R** and **02paper.pdf** on main page.  
 
-Your assignment is to replicate this GitHub repository and produce a report that describes patterns in INCARCERATION STATUS by race and gender in the year 2002, using NLSY97 publicly available data. To do this, you will need to create a data extract at the [NLS Investigator](https://www.nlsinfo.org/investigator/pages/search) website that pulls the variables of interest. Here is a screenshot to help you out:
+#### [Procedure]  
+git clone this repo → run ```code.R``` → run ```02paper.tex```  
 
-![](https://raw.githubusercontent.com/nateybear/causal-inference-2022/main/writing/rdemo_assets/NLSY97%20Investigator.png)
 
-MAKE SURE to read the Codebook tab to understand how your variables are coded!
-
-Navigate to the Save/Download tab and use the Advanced Download feature to download a comma-delimited file (CSV). You may download the RData file instead if you wish, but my example code uses CSV files.
 
 # Grading
 
