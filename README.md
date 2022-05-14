@@ -3,7 +3,7 @@
 **code.R** and **02paper.pdf** on main page.  
 
 #### [Procedure]  
-git clone this repo → run ```code.R``` → run ```02paper.tex```  
+```git clone``` this repo → run ```code.R``` → run ```02paper.tex```  
 
 
 
