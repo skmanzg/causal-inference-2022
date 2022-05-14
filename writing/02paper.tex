@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% these packages let you do math
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% we need these packages for fancy R tables
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+% these packages play with the spacing/margins of the document. Uncomment the commands on lines 16 and 17 to see what they do.
+\usepackage{a4wide}\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+%\doublespacing
+%\geometry{margin=1.5in}
+
+% this package helps us with including images. Setting the graphics path makes it easier to refer to things in the \includegraphics command.
+\usepackage{graphicx}
+\graphicspath{ {../figures/} }
+
+% make some hyperlinks using the \href command
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+% set the author, title, and date of the document. \maketitle adds it to the document.
+\author{Seungwoon Shin}
+\title{My Paper on NLSY02 Data}
+\date{Sping 2022}
+
+\begin{document}
+\maketitle
+
+\section{Brief Analysis}
+The main objective of this paper is to compare the mean number of arrests between 1997 and 2002 by race and gender. 
+
+\begin{figure}[H]
+
+    \caption{Mean Number of Arrests by Race and Gender}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{arrests_by_racegender}
+        \caption{1997}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{02arrests_by_racegender}
+        \caption{2002}
+    \end{subfigure}
+    \label{fig:graph}
+
+
+\end{figure}
+
+\input{../tables/arrests_by_racegender.tex}
+\input{../tables/02arrests_by_racegender.tex}
+As we have seen Figure \ref{fig:graph} and the Tables, the male is more likely to commit crimes than the female regardless of race and year except for mixed-race(non-Hispanic). The largest mean number of arrests is from Black male regardless of years. The mean number of arrests increased over time for Black males whereas it decreased for the rest of the other males. The mean number of arrests has increased for females regardless of the race except for Blacks.
+\section{Regression}
+
+
+
+\input{../tables/regress_arrests_by_racegender.tex}
+
+The sign of dependent variables indicates that Male with a positive coefficient is likely to commit crimes. Namely, it leads an increase in the mean number of arrests in 1997. In contrast, the rest induces a decrease in the mean number of arrests. The dependent variable 'Male' also partially implies the largest mean number of arrests from Blacks.
+
+\newpage
+\input{../tables/02regress_arrests_by_racegender.tex}
+
+Unlike previous Table 3, the absolute value of all dependent variable coefficients has increased. This indicates that some of the categories such as Black male remarkably increased in the mean number of arrests in 2002 while the other categories such as Mixed race (non-Hispanic) male decreased a lot. 
+
+\end{document}
